@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import styles from './cart.module.css'; // replace with your stylesheet
+import styles from './Cart.module.css';
 
 const CartProducts = ({ cartProducts, add, remove, truncateStr }) => {
     return (
@@ -25,10 +25,10 @@ const CartProducts = ({ cartProducts, add, remove, truncateStr }) => {
                                 </div>
                             </div>
                         </div>
-                        <hr style={{color:'gray'}} />
+                        <hr style={{ color: 'gray' }} />
                     </motion.div>
                 )}
-                 {cartProducts.length === 0 && <motion.h2 key={'heading'} animate={{ y: [60, 1] }} className={styles.emptyCart}>Cart is empty</motion.h2>}
+                {cartProducts.length === 0 && <motion.h2 key={'heading'} animate={{ y: [60, 1] }} className={styles.emptyCart}>Cart is empty</motion.h2>}
             </AnimatePresence>
         </div>
     );
