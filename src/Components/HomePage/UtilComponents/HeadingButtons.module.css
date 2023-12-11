@@ -3,9 +3,11 @@
     display: flex;
     justify-content: space-between;
 }
-.heading h2{
+
+.heading h2 {
     margin-bottom: .4rem;
 }
+
 .heading a {
     color: rgb(22, 172, 122);
     font-size: 1rem;
@@ -25,8 +27,14 @@
     .heading a,
     .heading a i {
         font-size: .7rem;
+
     }
-    .heading{
+
+    .heading a {
+        margin-bottom: .2rem;
+    }
+
+    .heading {
         margin-left: .4rem;
     }
 }

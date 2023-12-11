@@ -166,6 +166,9 @@
     .heading h2{
         margin-bottom: 0.3;
     }
+    .heading a{
+        margin-bottom: .3rem;
+    }
 
     .bestDeals .laptop {
         flex-direction: column;

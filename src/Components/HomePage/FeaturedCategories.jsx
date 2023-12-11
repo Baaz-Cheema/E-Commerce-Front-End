@@ -55,7 +55,7 @@ export default function FeaturedCategories() {
 
     return (
         <>
-            <HeadingButtons linkTo={'All Categories'} title={'Featured Categories'} navLeft={goLeft} navRight={goRight} />
+            <HeadingButtons linkTo={'More'} title={'Featured Categories'} navLeft={goLeft} navRight={goRight} />
             <div className={styles.parent}>
                 <div className={styles.carousel} style={{ 'transform': `translateX(-${currentGroupIndex * 100}%)` }} >
                     <CategoryGroup func={selectCategory} data={arr1} />
