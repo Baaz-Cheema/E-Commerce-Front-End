@@ -20,6 +20,6 @@ module.exports = {
     "no-undef": "error", // throws an error when a variable is used but not defined
     "no-unused-vars": "warn", // warns when a variable is defined but not used
     "eqeqeq": "warn", // warns when == or != is used instead of === or !==
-    "react/prop-types": "off"
+    "react/prop-types": "off",
   }
 }
