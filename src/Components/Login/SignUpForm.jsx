@@ -31,10 +31,10 @@ export default function SignupForm() {
                         <input type="password" name="" id="password" placeholder='Password' />
                     </div>
                     <div className={styles.formItem}>
-                        <label htmlFor="password">
+                        <label htmlFor="repeatPassword">
                             Repeat password
                         </label>
-                        <input type="password" name="" id="password" placeholder='Password' />
+                        <input type="password" name="" id="repeatPassword" placeholder='Password' />
                     </div>
                     <div className={styles.submit}>
                         <button>
