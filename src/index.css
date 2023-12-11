@@ -75,3 +75,8 @@ select:-webkit-autofill:focus {
 .checkbox-wrapper-47 label::before {
   transition: 0.25s all ease;
 }
+
+
+a {
+  color: white;
+}
