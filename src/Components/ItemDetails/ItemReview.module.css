@@ -1,0 +1,29 @@
+.reviewContainer {
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+
+.reviews {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.reviews div h6:nth-of-type(2) {
+    margin-top: .8rem;
+    font-weight: 100;
+
+}
+
+.reviews div h6:nth-of-type(1) {
+    display: flex;
+    align-items: center;
+}
+.reviews h6 i{
+    margin-right: .5rem;
+}
+
+@media (max-width:750px) {
+    .reviews {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

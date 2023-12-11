@@ -1,0 +1,185 @@
+.bestDeals {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    height: 30rem;
+    color: white;
+}
+
+.heading {
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+}
+
+.heading a {
+    color: rgb(22, 172, 122);
+    font-size: 1rem;
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+.bestDeals div {
+    border-radius: .3rem;
+}
+
+.bestDeals h2 {
+    font-size: 1.3rem;
+}
+
+.bestDeals .laptop {
+    width: 55%;
+    margin-right: 2rem;
+    background-color: rgb(22, 172, 122);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.laptop h3 {
+    font-weight: lighter;
+}
+
+.laptop img {
+    margin-top: 2rem;
+    width: 70%;
+    object-fit: contain;
+    flex: 0 0 auto;
+}
+
+.others .shoe {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.shoe h3 {
+    font-weight: lighter;
+}
+
+.others img {
+    width: 60%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.bestDeals div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 42%;
+}
+
+.others .shoe:nth-child(1) {
+    background-color: rgb(19, 1, 98);
+    width: 100%;
+    height: 47%;
+}
+
+.seeMore {
+    display: flex;
+    align-items: center;
+}
+
+.others .shoe:nth-child(2) {
+    background-color: rgb(231, 159, 25);
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+}
+
+#app h3 {
+    font-size: 1.5rem;
+}
+
+#app h2 {
+    font-size: 1.2rem;
+}
+
+/* Existing CSS */
+
+/* ... */
+
+/* Media Queries */
+@media (max-width: 1120px) {
+    .bestDeals {
+        height: 27rem;
+    }
+
+    .bestDeals .laptop {
+        flex-direction: column;
+    }
+
+    .laptop img {
+        width: 80%;
+    }
+
+
+}
+
+@media(max-width: 955px) {
+    #app {
+        font-size: 1rem;
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .bestDeals {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .bestDeals .laptop {
+        width: 100%;
+        margin-right: 0;
+    }
+   
+
+    .bestDeals div:nth-child(2) {
+        width: 100%;
+    }
+
+    .others .shoe {
+        width: 100%;
+        height: auto;
+        margin-top: .5rem;
+    }
+
+    .others div:nth-child(2) {
+        flex-direction: column;
+        margin-top: .5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .bestDeals {
+        flex-direction: column;
+        height: auto;
+    }
+    .heading h2{
+        margin-bottom: 0.3;
+    }
+
+    .bestDeals .laptop {
+        flex-direction: column;
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .bestDeals div:nth-child(2) {
+        width: 100%;
+    }
+
+    .others .shoe {
+        width: 100%;
+
+        height: auto;
+    }
+}

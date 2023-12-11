@@ -1,0 +1,117 @@
+.categoryItem {
+    overflow: auto;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #f0eded;
+    padding: 1rem;
+    box-sizing: border-box;
+    margin: .5rem;
+    cursor: pointer;
+}
+
+
+.categoryItem div:nth-child(1) {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.categoryItem a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    padding: .1rem;
+    display: flex;
+    align-items: center;
+    font-size: .8rem;
+}
+.categoryItem a i{
+    font-size: .8rem;
+    margin-bottom: 2.5px;
+}
+
+a i {
+    font-size: .8rem;
+}
+
+.imgContainer {
+    flex: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgContainer img {
+    width: 150px;
+    height: 100px;
+    object-fit: contain;
+}
+
+
+@media screen and (max-width:1080px) {
+    .imgContainer {
+        flex: 2;
+    }
+
+    .imgContainer img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .categoryItem div:nth-child(1) {
+        flex: 8;
+        font-size: .8rem;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .categoryItem {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .categoryItem {
+        padding: 0;
+    }
+
+    .categoryItem div:nth-child(1) {
+        flex: 2;
+    }
+
+    .imgContainer {
+        flex: 8;
+    }
+
+    .categoryItem div:nth-child(1) h6 {
+        font-size: .9rem;
+        white-space: nowrap;
+        margin-bottom: 0;
+
+    }
+
+    .imgContainer img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .categoryItem div:nth-child(1) p,
+    .categoryItem div:nth-child(1) a {
+        display: none;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .categoryItem div:nth-child(1) h6 {
+        font-size: .8rem;
+        white-space: nowrap;
+    }
+
+    .imgContainer img {
+        width: 75px;
+        height: 75px;
+    }
+}

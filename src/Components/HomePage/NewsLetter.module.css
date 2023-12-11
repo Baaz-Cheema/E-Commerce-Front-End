@@ -1,0 +1,31 @@
+.newsLetter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.newsLetter form {
+    display: grid;
+    grid-template-columns: 1.7fr 0.3fr;
+    gap: 15px;
+    width: 100%;
+}
+
+
+.newsLetter input {
+    background-color: white;
+    padding-left: 1rem;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    color: black;
+}
+
+.newsLetter button {
+    margin: 0;
+}
+
+.newsLetter input:focus {
+    outline: none;
+    border: 2px solid var(--main-bg-color);
+}

@@ -1,0 +1,77 @@
+.heading {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+}
+.heading h2{
+    margin-bottom: .4rem;
+}
+.heading a {
+    color: rgb(22, 172, 122);
+    font-size: 1rem;
+    text-decoration: none;
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width:550px) {
+    .heading h2 {
+        font-size: 1.2rem;
+        white-space: nowrap;
+    }
+
+    .heading a,
+    .heading a i {
+        font-size: .7rem;
+    }
+    .heading{
+        margin-left: .4rem;
+    }
+}
+
+
+a i {
+    color: rgb(22, 172, 122);
+    font-size: 1.2rem;
+    margin-top: .2rem;
+}
+
+.heading div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.heading .btns button {
+    font-size: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: rgb(237, 236, 236);
+    color: black;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color .3s;
+    margin: .5rem;
+}
+
+.heading .btns {
+    display: flex;
+
+}
+
+.heading .btns button:disabled() {
+    background-color: red;
+}
+
+@media (max-width:550px) {
+    .heading .btns button {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}

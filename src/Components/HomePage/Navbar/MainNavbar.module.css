@@ -1,0 +1,341 @@
+.navContainer {
+    position: fixed;
+    top: 0;
+    z-index: 8;
+    width: 100%;
+    background-color: white;
+}
+
+.mainNav {
+    width: 100%;
+    background-color: white;
+    padding: .4rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.navItem:hover {
+    color: var(--main-bg-color);
+}
+
+.heading {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.heading a {
+    margin-left: 1.5rem;
+}
+
+.heading h3 {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.mainNav a {
+    text-decoration: none;
+    color: black;
+}
+
+.searchForm {
+    position: relative;
+}
+
+#searchInput {
+    color: black;
+}
+
+#searchInput:focus {
+    outline: none;
+}
+
+.searchForm .searchBox {
+    width: 15.3rem;
+    max-height: 20rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    overflow: auto;
+    background-color: white;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.searchBox .searchItem {
+    border: 2px solid #f1f1f1;
+    width: 100%;
+    min-height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem;
+    cursor: pointer;
+}
+
+.searchItem .imgContainer {
+    width: 20%;
+    overflow: hidden;
+}
+
+.searchItem .info {
+    width: 80%;
+    display: block;
+    padding-left: .7rem;
+    text-transform: capitalize;
+}
+
+.imgContainer img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.imgContainer {
+    display: flex;
+    align-items: center;
+}
+
+.scrolled {
+    border-bottom: 2px solid #eeeeee;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.signup {
+    display: flex;
+    margin-left: 2rem;
+}
+
+.signup .btn {
+    background-color: rgb(22, 172, 122);
+    border: none;
+    margin-left: 1rem;
+    padding: .4em 1.4em;
+    color: white;
+    display: flex;
+    white-space: nowrap;
+    align-items: center;
+}
+
+
+.signup .btn:hover {
+    background-color: rgb(42, 192, 142);
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.search input {
+    background-color: #f1f1f1;
+    border: none;
+    padding: .4em 1em;
+}
+
+.search span {
+    font-weight: bold;
+    background-color: #f1f1f1;
+    color: black;
+    border: none;
+    padding: .4em 0em;
+    padding-left: 1em;
+    padding-right: 0;
+}
+
+
+.cart i {
+    font-size: 2em;
+    color: rgb(22, 172, 122);
+    text-align: center;
+    padding-right: 3px;
+}
+
+.categoryBox {
+    display: none;
+}
+
+.cart {
+    margin-left: 1rem;
+    position: relative;
+    padding: 0 1em;
+    border: 1px solid rgb(22, 172, 122);
+    border-radius: 1.2em;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+        border: 1px solid rgb(42, 192, 142);
+    }
+}
+
+.account {
+    padding: 0 .6rem;
+    margin-left: 1rem;
+    border: 1px solid rgb(22, 172, 122);
+    border-radius: 1.2em;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+        border: 1px solid rgb(42, 192, 142);
+    }
+}
+
+.account i {
+    font-size: 2rem;
+}
+
+
+.cart i:hover {
+    color: rgb(42, 192, 142);
+}
+
+.cartNumber {
+    position: absolute;
+    top: -4px;
+    /* Adjust as needed */
+    right: -3px;
+    /* Adjust as needed */
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    /* Makes it circular */
+    padding: 2px 6px;
+    font-size: 0.7em;
+    min-width: 20px;
+    text-align: center;
+}
+
+.navSignin {
+    display: none;
+    color: var(--main-bg-color);
+}
+
+.navSignin a {
+    color: grey;
+    text-decoration: none;
+    color: var(--main-bg-color);
+}
+
+.searchBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.searchBox button {
+    color: var(--bs-heading-color);
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchBox button:hover {
+    background-color: white;
+}
+
+.searchFormTablet {
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    padding: 1rem 1rem;
+    top: 3rem;
+    left: 0rem;
+}
+
+.searchBox input {
+    width: 100%;
+}
+
+
+
+@media (max-width:1000px) {
+    .heading {
+        justify-content: center;
+    }
+
+    .signup {
+        justify-content: center;
+        margin-left: 0
+    }
+
+    .heading a {
+        display: none;
+    }
+}
+
+@media (max-width:790px) {
+    .ctg {
+        display: none;
+    }
+}
+
+
+@media (max-width:660px) {
+    .heading h3 {
+        font-size: 2.1rem;
+    }
+
+    .searchForm .searchBox {
+        width: 100%;
+    }
+
+    .searchBox {
+        display: flex;
+    }
+
+    #searchInput {
+        width: 100%;
+    }
+
+    .mainNav {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .heading a {
+        display: none;
+    }
+
+    .heading {
+        flex-grow: 1;
+        justify-content: start;
+    }
+
+    .ctg {
+        display: none;
+    }
+
+    .navSignin {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        padding-right: 1rem;
+        width: 100%;
+        background-color: #f1f1f1;
+    }
+
+    .searchIcon {
+        display: none;
+    }
+
+    .searchFormDesktop {
+        display: none;
+    }
+
+    .signup {
+        margin-top: 0;
+        justify-content: end;
+    }
+
+    .signup a {
+        display: none;
+    }
+
+}

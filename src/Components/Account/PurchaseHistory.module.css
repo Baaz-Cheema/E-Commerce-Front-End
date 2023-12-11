@@ -1,0 +1,148 @@
+.historyItem {
+    border-radius: 1rem;
+    margin-bottom: 3rem;
+}
+
+.innerFirst {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f1f1f1;
+    padding: 1rem;
+}
+
+.details {
+    overflow: hidden;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 55%;
+}
+
+.infoTwo {
+    display: flex;
+    align-items: center;
+}
+
+.infoTwo button {
+    margin-right: 0;
+    margin-left: 2rem;
+}
+
+.infoTwo span {
+    color: rgb(30, 64, 175);
+    font-weight: 500;
+    font-size: .9rem;
+    background-color: rgb(219, 234, 254);
+    padding: .1rem 1rem;
+    border-radius: .4rem;
+    text-transform: uppercase;
+}
+
+.historyItem:nth-of-type(1) .innerFirst .infoTwo span {
+    color: rgb(175, 30, 30);
+    font-weight: 500;
+    font-size: .9rem;
+    padding: .1rem .8rem;
+    background-color: rgb(254, 219, 219);
+}
+
+.orderItem {
+    display: flex;
+    height: 12rem;
+    align-items: center;
+    justify-content: start;
+    border: 1px solid lightgray;
+    padding: 1rem;
+}
+
+.imgContainer img {
+    width: 150px;
+    object-fit: cover;
+}
+
+.imgContainer {
+    display: flex;
+}
+
+
+.orderSummary {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem;
+    width: 20rem;
+    margin-left: auto;
+}
+
+.orderSummaryWrapper {
+    width: 100%;
+    background-color: #f1f1f1;
+    min-height: 6rem;
+}
+
+.prices {
+    text-align: end;
+}
+
+.detailButton {
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+    margin-bottom: 1rem;
+    transform: translate(-23px, 20px);
+    display: flex;
+    align-items: center;
+}
+
+.detailButton i,
+.detailButtonTwo i {
+    font-size: 2rem;
+}
+
+.detailButtonTwo {
+    display: flex;
+    align-items: center;
+}
+
+
+@media (max-width:1024px) {
+    .info {
+        grid-template-columns: 1fr;
+    }
+
+    .infoTwo {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .infoTwo button {
+        margin-left: 0;
+    }
+   
+}
+
+@media (max-width:600px) {
+    .info p {
+        margin-bottom: 0.5rem;
+        font-size: .8rem;
+    }
+    .orderItem{
+        height: 10rem;
+    }
+    .info p:nth-of-type(1) {
+        margin-bottom: 0;
+    }
+
+    .infoTwo span {
+        font-size: .7rem;
+        padding: .1rem .8rem;
+    }
+    .historyItem:nth-of-type(1) .innerFirst .infoTwo span {
+        font-size: .7rem;
+        padding: .1rem .6rem;
+    }
+    .orderSummary {
+       width: 100%;
+    }
+}
