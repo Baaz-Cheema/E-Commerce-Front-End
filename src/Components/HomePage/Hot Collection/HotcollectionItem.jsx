@@ -1,4 +1,4 @@
-import styles from './HotCollectionItem.module.css'
+import styles from './HotcollectionItem.module.css'
 import { forwardRef } from 'react';
 
 import { useDispatch } from 'react-redux';
