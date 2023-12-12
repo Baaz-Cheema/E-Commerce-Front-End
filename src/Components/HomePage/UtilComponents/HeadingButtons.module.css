@@ -70,7 +70,10 @@ a i {
 
 .heading .btns {
     display: flex;
+}
 
+.heading .btns button {
+    color: black !important;
 }
 
 .heading .btns button:disabled() {

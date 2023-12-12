@@ -12,6 +12,9 @@ import { useEffect } from 'react'
 
 
 export default function Shipping({ displayPayment }) {
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'auto' })
+    }, [])
     const dispatch = useDispatch()
     const [isSelected, setIsSelected] = useState(null)
     const navigate = useNavigate()
@@ -28,7 +31,7 @@ export default function Shipping({ displayPayment }) {
             navigate('/')
         }
     }, [cartProducts, navigate])
-    
+
     const add = (id) => {
         dispatch(cartActions.increment(id))
     }

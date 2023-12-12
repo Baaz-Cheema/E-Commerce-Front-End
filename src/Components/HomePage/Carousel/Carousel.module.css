@@ -17,7 +17,7 @@
     transform: translateY(-50%);
     border: none;
     background-color: #f1f1f178;
-    color: black;
+    color: black !important;
     height: 5em;
     display: flex;
     justify-content: center;

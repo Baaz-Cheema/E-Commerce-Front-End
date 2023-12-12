@@ -8,8 +8,8 @@ import { AuthSliceActions } from '../../store/AuthSlice'
 export default function LoginForm() {
     const email = useSelector(state => state.auth.prevEmail)
     const password = useSelector(state => state.auth.password)
-    const dispatch= useDispatch()
-    
+    const dispatch = useDispatch()
+
     const [data, setData] = useState({ email: 'test123@gmail.com', password: 'test' })
     const [error, setError] = useState(false)
     const [loading, setLoading] = useState(false)
@@ -39,7 +39,7 @@ export default function LoginForm() {
     return (
         <div className={styles.container}>
             <h2>Sign in to your account</h2>
-            <span style={{ marginBottom: '1rem' }}>Or <Link to={'/signup'} style={{ color: 'blue', textDecoration: 'none' }}>register a new account</Link></span>
+            <span style={{ marginBottom: '1rem' }}>Or <Link to={'/signup'} style={{ color: '#3B99FC', textDecoration: 'none' }}>register a new account</Link></span>
             <div className={styles.inner}>
                 <div className={styles.demoPrompt}>
                     <p>Demo credentials</p>
@@ -66,9 +66,9 @@ export default function LoginForm() {
                                 <input disabled={loading} defaultChecked={true} type="checkbox" name="" id="rememberMe" className={styles.substituted} />
                                 <label htmlFor="rememberMe">Remember me</label>
                             </div>
-                            <p>Forgot your password?</p>
+                            <p style={{ color: '#3B99FC' }}>Forgot your password?</p>
                         </div>
-                        <button disabled={loading}>
+                        <button style={{color:'white'}} disabled={loading}>
                             {loading && <i className='bx bx-loader-alt bx-spin' ></i>} Sign in
                         </button>
                     </div>

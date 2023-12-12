@@ -90,6 +90,7 @@
 
     .carouselItem:nth-child(1) button {
         margin-top: 0;
+        color: white;
     }
     .carouselItem:nth-child(3) .imageContainer img {
         width: 100%;

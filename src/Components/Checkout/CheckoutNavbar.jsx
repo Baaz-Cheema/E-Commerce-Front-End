@@ -1,15 +1,11 @@
 import styles from './CheckoutNavbar.module.css'
 import { Outlet } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
-import { useEffect } from 'react'
+
 
 export default function CheckoutNavbar() {
     const location = useLocation()
     const isActive = (path) => path === location.pathname
-    useEffect(() => {
-
-        window.scrollTo({ top: 0, behavior: 'auto' })
-    }, [])
 
     return (
         <div className={styles.parent}>

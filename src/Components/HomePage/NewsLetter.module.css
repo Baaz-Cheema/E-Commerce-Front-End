@@ -23,6 +23,7 @@
 
 .newsLetter button {
     margin: 0;
+    color: white;
 }
 
 .newsLetter input:focus {
