@@ -42,7 +42,7 @@ export default function Cart({ cartStyle, iconStyle }) {
                     <Offcanvas.Title>Cart</Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body className={styles.wrapper}>
-                    <CartProducts cartProducts={cartProducts} add={add} remove={remove} truncateStr={truncateStr} />
+                    <CartProducts close={handleClose} cartProducts={cartProducts} add={add} remove={remove} truncateStr={truncateStr} />
                     <div className={styles.checkout}>
                         <div>
                             <div className={styles.subtotal}>

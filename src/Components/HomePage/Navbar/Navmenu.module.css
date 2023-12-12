@@ -8,6 +8,19 @@
     color: black;
 }
 
+.container::-webkit-scrollbar {
+    width: 0px;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 2em;
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 .category {
     margin: 0;
     padding: .8rem 1.7rem;

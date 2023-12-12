@@ -1,14 +1,28 @@
 import { motion, AnimatePresence } from "framer-motion";
 import styles from './Cart.module.css';
+import { useNavigate } from "react-router";
+import { useDispatch } from "react-redux";
+import { productListActions } from "../../store/EcommerceStore";
 
-const CartProducts = ({ cartProducts, add, remove, truncateStr }) => {
+
+
+const CartProducts = ({ cartProducts, add, remove, truncateStr,close }) => {
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+    async function displayDetails(id) {
+        const response = await fetch(`https://dummyjson.com/products/${id}`)
+        const data = await response.json()
+        dispatch(productListActions.setProductDetails(data))
+         navigate('/itemDetail')
+         close()
+    }
     return (
         <div id={styles.cartProducts}>
             <AnimatePresence>
                 {cartProducts.length > 0 && cartProducts.map((a) =>
-                    <motion.div key={a.id} exit={{ y: -40, opacity: 0 }} className={styles.hrr}>
+                    <motion.div  key={a.id} exit={{ y: -40, opacity: 0 }} className={styles.hrr}>
                         <div className={styles.products}>
-                            <div className={styles.imgContainer}>
+                            <div onClick={()=>displayDetails(a.id)} className={styles.imgContainer}>
                                 <img src={a.images[0]} alt="" />
                             </div>
                             <div className={styles.info}>

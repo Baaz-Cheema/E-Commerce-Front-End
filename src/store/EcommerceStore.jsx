@@ -12,9 +12,9 @@ const productListSlice = createSlice({
         filteredProducts: [],
         selectedBrands: [],
         isLoading: false,
-        selectedCategory: '',
-        selectedCategoryProducts: [],
-        selectedProduct: {},
+        selectedCategory: JSON.parse(localStorage.getItem('selectedCategory')) || '',
+        selectedCategoryProducts: JSON.parse(localStorage.getItem('selectedCategoryProducts')) || [],
+        selectedProduct: JSON.parse(localStorage.getItem('selectedProduct')) || {},
         allProducts: [],
         productsPerPage: 15,
         pagnation: 0,
@@ -30,7 +30,7 @@ const productListSlice = createSlice({
             const brandItems = state.selectedBrands
             const products = state.productData.products
 
-            if (action.payload === 'emptyList') { //why did i do this....
+            if (action.payload === 'emptyList') {
                 state.selectedBrands = []
                 return
             }
@@ -54,9 +54,11 @@ const productListSlice = createSlice({
         },
         setCategory(state, action) {
             state.selectedCategory = action.payload
+            localStorage.setItem('selectedCategory', JSON.stringify(action.payload));
         },
         setProductDetails(state, action) {
             state.selectedProduct = action.payload
+            localStorage.setItem('selectedProduct', JSON.stringify(action.payload));
         },
         setAllProducts(state, action) {
             state.allProducts = action.payload
@@ -65,6 +67,7 @@ const productListSlice = createSlice({
             state.pagnation = action.payload
         }, setCategoryProducts(state, action) {
             state.selectedCategoryProducts = action.payload
+            localStorage.setItem('selectedCategoryProducts', JSON.stringify(action.payload));
         },
         setProductsPerPage(state, action) {
             state.productsPerPage = action.payload

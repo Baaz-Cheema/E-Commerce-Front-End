@@ -14,7 +14,7 @@ export default forwardRef(function HotCollectionGroup(props, ref) {
         const response = await fetch(`https://dummyjson.com/products/${id}`)
         const data = await response.json()
         dispatch(productListActions.setProductDetails(data))
-        return navigate('/itemDetail')
+         navigate('/itemDetail')
     }
     
     return (
