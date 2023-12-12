@@ -1,4 +1,4 @@
-# Project Title
+# Almari
 
 This project was built using React, React Router V6, Redux Toolkit, Motion Framer, and React Bootstrap. It took me 41 days to complete.
 
