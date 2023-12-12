@@ -23,7 +23,8 @@
 .filterButton {
     border: 1px solid #e9e9e9;
     background-color: white;
-    color: rgb(91, 90, 90);
+    color: rgb(91, 90, 90) !important;
+
 
 }
 
