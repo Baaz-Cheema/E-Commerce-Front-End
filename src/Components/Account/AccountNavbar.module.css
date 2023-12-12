@@ -56,7 +56,11 @@
     border: 1.5px solid #0f86ef;
     border-radius: 8px;
 }
-
+.signout{
+    text-decoration: underline;
+    color: #0f86ef;
+    cursor: pointer;
+}
 
 
 @media(max-width:700px) {
