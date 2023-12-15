@@ -74,15 +74,17 @@
 
 .new {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: 600;
+    font-weight: 00;
     display: block;
     font-size: 3rem;
+    text-shadow: 3px 1px #040723;
     color: gold;
 }
 
 .carouselItem:nth-child(2) button {
     border-radius: 2rem;
     background-color: blue;
+    box-shadow: 1px 2px black;
     font-size: 1rem;
 }
 
@@ -226,7 +228,7 @@
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         font-weight: 600;
         display: block;
-        font-size: 3rem;
+        font-size: 3.8rem;
         color: gold;
     }
 

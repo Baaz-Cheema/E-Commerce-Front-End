@@ -56,8 +56,8 @@ export default function Carousel() {
                     <div className={styless.carouselItem}>
                         <div className={styless.textContainer}>
                             <span>Men`s collection</span>
-                            <span className={styless.new}>40<span>%</span> off</span>
-                            <p>Step into Style with Our Latest Fashion Collection</p>
+                            <span className={styless.new}>Mega sale</span>
+                            <p>Step into Style with deals upto 30% off</p>
                             <Link to={'/store'}><button> Shop Now</button></Link>
                         </div>
                         <div className={styless.imageContainer}>
