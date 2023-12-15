@@ -32,38 +32,59 @@
     margin-bottom: 1rem;
 }
 
-.carouselItem:nth-child(3) .textContainer {
-    position: absolute;
-    bottom: 0;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: white;
-    font-weight: bold;
-    font-size: 2em;
-    width: 100%;
-    /* semi-transparent black background */
-    padding: 10px;
-    /* some padding for better appearance */
-    border-radius: 10px;
-    text-align: center;
-}
+
 
 .carouselItem:nth-child(3) {
     background-color: rgb(255, 208, 0);
 
 }
-.carouselItem:nth-child(3) .imageContainer{
+
+.carouselItem:nth-child(3) .imageContainer {
     justify-content: center;
 }
+
+.carouselItem:nth-child(2) .imageContainer {
+    justify-content: center;
+}
+
 .carouselItem:nth-child(3) .imageContainer img {
     width: 60%;
 }
 
-.carouselItem:nth-child(2) {
-    background-color: rgb(6, 0, 1);
+.carouselItem:nth-child(2) .imageContainer img {
+    width: 100%;
+
 }
 
 
+
+.carouselItem:nth-child(2) .textContainer {
+    position: absolute;
+    bottom: 20%;
+    left: 40%;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 300;
+    font-size: 2em;
+    width: 60%;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.new {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    display: block;
+    font-size: 3rem;
+    color: gold;
+}
+
+.carouselItem:nth-child(2) button {
+    border-radius: 2rem;
+    background-color: blue;
+    font-size: 1rem;
+}
 
 .imageContainer {
     align-self: center;
@@ -92,9 +113,27 @@
         margin-top: 0;
         color: white;
     }
+
     .carouselItem:nth-child(3) .imageContainer img {
         width: 100%;
     }
+
+    .carouselItem:nth-child(2) .imageContainer img {
+        width: 130%;
+        padding-top: 2rem;
+    }
+    .carouselItem:nth-child(2) .textContainer{
+        font-size: .6rem;
+      }
+      .new{
+        font-size: 2rem;
+      }
+      .carouselItem:nth-child(2) button {
+        border-radius: 2rem;
+        background-color: blue;
+        font-size: .6rem;
+    }
+
 
     .carouselItem:nth-child(1) .imageContainer,
     .carouselItem:nth-child(1) .textContainer {
@@ -129,14 +168,18 @@
     .carouselItem {
         height: 300px;
     }
-
     .carouselItem:nth-child(1) .imageContainer,
     .carouselItem:nth-child(1) .textContainer {
         width: 100%;
         padding-left: 3.5em;
         font-size: .6rem;
     }
-    
+
+    .carouselItem:nth-child(2) .textContainer {
+        font-size: 1rem;
+    }
+
+
     .textContainer h1 {
         font-size: 2rem;
     }
@@ -154,6 +197,7 @@
     .textContainer p {
         margin-bottom: 1rem;
     }
+
     .carouselItem:nth-child(3) .imageContainer img {
         width: 70%;
     }
@@ -162,6 +206,28 @@
 @media (min-width: 860px) {
     .carouselItem {
         height: 500px;
+    }
+
+    .carouselItem:nth-child(2) .textContainer {
+        position: absolute;
+        bottom: 20%;
+        left: 40%;
+        text-transform: uppercase;
+        color: white;
+        font-weight: 300;
+        font-size: 2em;
+        width: 60%;
+        padding: 10px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .new {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        display: block;
+        font-size: 3rem;
+        color: gold;
     }
 
     .carouselItem:nth-child(1) .textContainer {
