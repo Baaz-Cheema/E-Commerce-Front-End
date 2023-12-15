@@ -45,7 +45,6 @@
 
 .carouselItem:nth-child(2) .imageContainer {
     justify-content: center;
-    background: linear-gradient(to right, rgb(142, 199, 218), rgb(93, 175, 192));
 }
 
 .carouselItem:nth-child(3) .imageContainer img {
