@@ -31,7 +31,17 @@ export default function Carousel() {
         currentImageIndex === images.length - 1 ? setCurrentImageIndex(0) : setCurrentImageIndex(prev => prev + 1)
     }
 
+    useEffect(() => {
+        const slider = setTimeout(() => {
+            if (currentImageIndex === images.length - 1) {
+                setCurrentImageIndex(0)
+                return
+            }
+            setCurrentImageIndex(prev => prev + 1)
+        }, 15000)
 
+        return () => clearTimeout(slider)
+    }, [currentImageIndex])
     return (
         <>
             <div className={styles.carousel}>
