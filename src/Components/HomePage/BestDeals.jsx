@@ -7,7 +7,6 @@ export default function BestDeals() {
         <>
             <div className={styles.heading}>
                 <h2>Get the Best Deals now </h2>
-                <Link className={styles.seeMore} to={'/store'}>More<i className='bx bx-chevron-right' ></i></Link>
             </div>
             <p style={{ marginTop: '.5rem' }}>Get our best deals available just for you</p>
             <div className={styles.bestDeals}>

@@ -47,7 +47,7 @@ export default forwardRef(function HotCollectionItem(props, ref) {
                 <img src={thumbnail} alt="" />
             </div>
             <div className={styles.info}>
-                <h5>{truncateStr(title)}</h5>
+                <h5>{title}</h5>
                 {/* <span className={styles.rating}>{rating} <i className='bx bxs-star' ></i></span> */}
                 <div className={styles.btn} >
                     <p className={styles.discount}> <span>${price}</span> <span >${Math.floor(price / (1 - discount / 100))}</span></p>

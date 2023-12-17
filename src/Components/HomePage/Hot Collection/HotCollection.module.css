@@ -35,27 +35,32 @@
     }
 } */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
     .parent {
         height: 47rem;
         margin-bottom: 3rem;
     }
 
     .carousel {
-        grid-template-columns: repeat(8, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        width: 300%;
+        width: 230%;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .carousel {
+        width: 320%;
     }
 }
 
 @media screen and (max-width: 550px) {
-    
+
     .carousel {
         grid-template-columns: repeat(8, 1fr);
         grid-template-rows: repeat(2, 1fr);
         width: 380%;
-        
+
     }
+
     .parent {
         height: 40rem;
     }
