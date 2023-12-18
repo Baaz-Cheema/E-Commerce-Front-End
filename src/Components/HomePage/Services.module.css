@@ -45,6 +45,7 @@
     .services {
         flex-direction: column;
         align-items: center;
+        margin-top: 5.2rem;
     }
 
     .service a {

@@ -1,5 +1,5 @@
 .heading {
-    margin-top: 5rem;
+    margin-top: 4rem;
     display: flex;
     justify-content: space-between;
 }
@@ -54,10 +54,10 @@ a i {
 
 .heading .btns button {
     font-size: 1.5rem;
-    width: 3rem;
-    height: 3rem;
+    width: 2.5rem;
+    height: 2.5rem;
     border-radius: 50%;
-    background-color: rgb(237, 236, 236);
+    background-color: transparent;
     color: black;
     border: none;
     display: flex;
@@ -66,6 +66,7 @@ a i {
     cursor: pointer;
     transition: background-color .3s;
     margin: .5rem;
+    border: 1px solid grey;
 }
 
 .heading .btns {

@@ -34,7 +34,7 @@ export default function Cart({ cartStyle, iconStyle }) {
     return (
         <>
             <span className={cartStyle} onClick={handleShow} >
-                <i className='bx bxs-cart'></i>
+            <i className='bx bxs-shopping-bag' ></i>
                 {cartProducts.length > 0 && <motion.span animate={{ scale: [1.4, 1] }} key={cartItemAmount} className={iconStyle}>{cartItemAmount}</motion.span>}
             </span>
             <Offcanvas show={show} onHide={handleClose} placement='end'>

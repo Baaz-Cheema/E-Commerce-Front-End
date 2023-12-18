@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+
 import styles from './BestDeals.module.css'
 
 
@@ -8,7 +8,7 @@ export default function BestDeals() {
             <div className={styles.heading}>
                 <h2>Get the Best Deals now </h2>
             </div>
-            <p style={{ marginTop: '.5rem' }}>Get our best deals available just for you</p>
+            <p style={{ marginTop: '.2rem' }}>Get our best deals available just for you</p>
             <div className={styles.bestDeals}>
                 <div className={styles.laptop}>
                     <div>

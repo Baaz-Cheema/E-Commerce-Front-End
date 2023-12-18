@@ -65,11 +65,11 @@ export default function MainNavbar() {
                     <div className={styles.searchFormDesktop}>
                         <SearchForm products={products} />
                     </div>
+                    <Cart cartStyle={styles.cart} iconStyle={styles.cartNumber} />
 
                     {isLoggedIn ? <Link className={styles.account} to={'/account'}><i className='bx bxs-user' ></i></Link>
                         : <Link to={'/login'}><button className={styles.btn}>Sign in</button></Link>
                     }
-                    <Cart cartStyle={styles.cart} iconStyle={styles.cartNumber} />
                 </div>
             </nav>
             <div className={`${styles.categoryBox}`}>

@@ -1,11 +1,11 @@
 .carousel {
     display: flex;
-    margin-top: 2rem;
     position: relative;
     align-items: center;
     height: 90%;
     width: 200%;
     transition: transform 1s ease-out;
+    margin-top: 1rem;
 }
 
 
