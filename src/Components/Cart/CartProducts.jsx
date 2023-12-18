@@ -21,7 +21,7 @@ const CartProducts = ({ cartProducts, add, remove, truncateStr, close }) => {
             <AnimatePresence mode="wait">
                 {cartProducts.length > 0 && <motion.div key={'list'} exit={{ y: -40, opacity: 0 }}>
                     <AnimatePresence>
-                        {cartProducts.length > 0 && cartProducts.map((a) =>
+                        {cartProducts.length > 0 && cartProducts.map((a, i) =>
                             <motion.div layout key={a.id} exit={{ y: -40, opacity: 0 }} className={styles.hrr}>
                                 <div className={styles.products}>
                                     <div onClick={() => displayDetails(a.id)} className={styles.imgContainer}>
@@ -41,7 +41,9 @@ const CartProducts = ({ cartProducts, add, remove, truncateStr, close }) => {
                                         </div>
                                     </div>
                                 </div>
-                                <hr style={{ color: 'gray' }} />
+                               
+                                <motion.hr style={{ color: 'gray'}} animate={{display: i === cartProducts.length - 1 ? 'none' : '' }} />
+                                
                             </motion.div>
                         )}
                     </AnimatePresence>
