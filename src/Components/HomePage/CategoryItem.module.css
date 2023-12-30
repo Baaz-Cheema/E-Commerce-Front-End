@@ -99,7 +99,7 @@ a i {
     }
 
     .categoryItem div:nth-child(1) p,
-    .categoryItem div:nth-child(1) a {
+    .categoryItem div:nth-child(1) span {
         display: none;
     }
 }
