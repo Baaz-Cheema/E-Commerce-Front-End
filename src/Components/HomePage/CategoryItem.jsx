@@ -7,7 +7,7 @@ export default function CategoryItem({ title, quantity, image, func,}) {
             <div>
                 <h6>{title}</h6>
                 <p>{quantity} Products</p>
-                <a href="">Shop Now <i className='bx bxs-right-arrow'></i></a>
+                <span onClick={()=>func(title)} href="">Shop Now <i className='bx bxs-right-arrow'></i></span>
             </div>
             <div className={styles.imgContainer}>
                 <img src={image} />
