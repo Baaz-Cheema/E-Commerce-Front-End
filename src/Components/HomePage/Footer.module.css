@@ -16,8 +16,8 @@
 
 .inner {
     display: flex;
-    justify-content: space-around;
-    margin-left: 2em;
+    justify-content: space-evenly;
+    margin-left: 2rem;
     margin-right: 2rem;
     flex-wrap: wrap;
 }
@@ -29,17 +29,19 @@
 .inner .links div {
     display: flex;
     flex-direction: column;
+    text-align: left;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .inner .links {
     display: flex;
     padding: .5rem;
-    width: 50%;
     justify-content: space-evenly;
 }
 
 .inner a {
-    margin: .5rem;
+    padding: .5rem;
 }
 
 .inner .links div a:nth-child(1) {
@@ -68,6 +70,14 @@
     .payment img {
         height: 5rem;
     }
+
+    .inner .links div {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 .footer span {
@@ -79,12 +89,8 @@
 }
 
 @media (max-width: 768px) {
-    .inner {
-        flex-direction: column;
-    }
 
     .inner .links {
-        flex-wrap: wrap;
         width: 100%;
     }
 

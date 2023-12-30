@@ -50,7 +50,7 @@ export default function Carousel() {
                     <CarouselItem
                         key={0}
                         img='https://pngimg.com/d/iphone_13_PNG19.png'
-                        para="Step into the future with our new iPhone, equipped with advanced zoom capabilities that bring the world closer to you. Capture life\'s moments in stunning detail, making every memory unforgettable."
+                        para="Step into the future with our new iPhone, equipped with advanced zoom capabilities that bring the world closer to you. Capture life's moments in stunning detail, making every memory unforgettable."
                         title='Experience the Future with the New iPhone'
                         butn={true} />
                     <div className={styless.carouselItem}>
