@@ -12,6 +12,9 @@
     width: 100%;
 }
 
+.newsLetter h3 {
+    text-align: start;
+}
 
 .newsLetter input {
     background-color: white;

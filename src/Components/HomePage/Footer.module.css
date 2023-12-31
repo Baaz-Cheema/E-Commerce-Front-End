@@ -16,10 +16,11 @@
 
 .inner {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     margin-left: 2rem;
     margin-right: 2rem;
     flex-wrap: wrap;
+    gap: 15px;
 }
 
 .inner h3 {
@@ -32,12 +33,18 @@
     text-align: left;
     padding-left: 1rem;
     padding-right: 1rem;
+    justify-self: center;
 }
 
 .inner .links {
     display: flex;
     padding: .5rem;
     justify-content: space-evenly;
+    padding-left: 5rem;
+}
+
+.header {
+    margin-left: 5rem;
 }
 
 .inner a {
@@ -66,26 +73,23 @@
     margin: 0 auto;
 }
 
-@media (max-width:500px) {
-    .payment img {
-        height: 5rem;
-    }
-
-    .inner .links div {
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-        padding-left: 0;
-        padding-right: 0;
-    }
-}
-
 .footer span {
     font-size: 2rem;
 }
 
 .footer span i {
     margin: 1rem;
+}
+
+@media (max-width: 1024px) {
+    .inner .links {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .header {
+        margin-left: 0;
+    }
 }
 
 @media (max-width: 768px) {
@@ -100,5 +104,19 @@
 
     .newsLetter {
         width: 100%;
+    }
+}
+
+@media (max-width:500px) {
+    .payment img {
+        height: 5rem;
+    }
+
+    .inner .links div {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        padding-left: 0;
+        padding-right: 0;
     }
 }

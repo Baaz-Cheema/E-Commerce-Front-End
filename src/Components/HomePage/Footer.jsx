@@ -7,8 +7,7 @@ const Footer = () => {
                 <img src="https://content.invisioncic.com/p289038/monthly_2022_10/Payment-methods.png.2b9ba23475aaa15189f555f77ec3a549.png" alt="" />
             </div>
             <div className={styles.inner}>
-                <NewsLetter />
-                <div>
+                <div className={styles.header}>
                     <h3>Almari</h3>
                     <p>One place for all your shopping needs</p>
                     <span>
@@ -37,8 +36,9 @@ const Footer = () => {
                         <a href="#fakeLink2">Track Order</a>
                         <a href="#fakeLink3">Returns</a>
                     </div>
+    
                 </div>
-
+                <NewsLetter />
             </div>
             <hr />
             <p>© 2023 Developed by Baaz Cheema</p>
