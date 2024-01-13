@@ -66,14 +66,14 @@ export default function FlashSale() {
                 <div className={groupStyles.sale}>
                     <div className={groupStyles.info}>
                         <h3>Flash Sale <i style={{ color: 'orange' }} className='bx bxs-bolt' ></i></h3>
-                        <p>Grab your favourite items here. <br /> All of these items are on sale so grab them before they are sold out!</p>
+                        <p >Grab your favourite items here. <br /> All of these items are on sale so grab them before they are sold out!</p>
                         <div className={groupStyles.timer}>
                             <p><b> Time Left:</b></p>
                             <p className={groupStyles.time}><span>01</span>:<span> {minutes}</span>: <span>{seconds}</span></p>
                         </div>
                     </div>
                     <Link to={'/store'} style={{ textDecoration: 'none' }}>
-                        <button>See all Items <i className='bx bx-chevron-right' ></i></button>
+                        <button id={groupStyles.saleP}>See all Items <i className='bx bx-chevron-right' ></i></button>
                     </Link>
                 </div>
                 <div ref={scrollRef} className={groupStyles.group}>
@@ -84,7 +84,7 @@ export default function FlashSale() {
                         img={item.images[0]}
                         price={item.price}
                         discountPercentage={item.discountPercentage}
-                        displayDetails={()=>displayDetails(item.id)} />)}
+                        displayDetails={() => displayDetails(item.id)} />)}
                 </div>
             </div>
         </div>

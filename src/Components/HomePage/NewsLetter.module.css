@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 2rem;
+    grid-column: span 2;
 }
 
 .newsLetter form {
