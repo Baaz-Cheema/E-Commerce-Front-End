@@ -75,4 +75,7 @@
     .bar {
         margin-top: 1rem;
     }
+    .item{
+        padding-bottom: 1rem;
+    }
 }
