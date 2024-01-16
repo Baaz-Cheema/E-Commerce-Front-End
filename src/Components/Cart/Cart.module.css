@@ -103,6 +103,11 @@ button:nth-of-type(2) {
     color: white;
 }
 
+.checkout button:disabled {
+    background-color: rgba(22, 172, 122, 0.5);
+    cursor: not-allowed;
+}
+
 .subtotal {
     display: flex;
     justify-content: space-between;

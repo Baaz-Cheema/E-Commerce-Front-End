@@ -34,7 +34,7 @@ export default function Cart({ cartStyle, iconStyle }) {
     return (
         <>
             <span className={cartStyle} onClick={handleShow} >
-            <i className='bx bxs-shopping-bag' ></i>
+                <i className='bx bxs-shopping-bag' ></i>
                 {cartProducts.length > 0 && <motion.span animate={{ scale: [1.4, 1] }} key={cartItemAmount} className={iconStyle}>{cartItemAmount}</motion.span>}
             </span>
             <Offcanvas show={show} onHide={handleClose} placement='end'>
@@ -51,7 +51,7 @@ export default function Cart({ cartStyle, iconStyle }) {
                             </div>
                             <p style={{ padding: 0, color: 'gray' }}>Shipping will be calculated at checkout</p>
                         </div>
-                        <Link to={'/checkout'}> <button onClick={handleClose}>Proceed to checkout</button></Link>
+                        <Link to={'/checkout'}> <button disabled={cartProducts.length <= 0} onClick={handleClose}>Proceed to checkout</button></Link>
                     </div>
                 </Offcanvas.Body >
             </Offcanvas>
