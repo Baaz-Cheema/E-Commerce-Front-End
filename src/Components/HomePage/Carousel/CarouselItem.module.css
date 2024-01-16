@@ -16,7 +16,7 @@
 }
 
 .carouselItem:nth-child(1) button {
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .carouselItem:nth-child(1) .imageContainer img {
@@ -30,6 +30,7 @@
     padding-left: 5em;
     margin-top: auto;
     margin-bottom: 1rem;
+    align-self: center;
 }
 
 
@@ -73,7 +74,7 @@
 }
 
 .new {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 00;
     display: block;
     font-size: 3rem;
@@ -124,13 +125,16 @@
         width: 130%;
         padding-top: 2rem;
     }
-    .carouselItem:nth-child(2) .textContainer{
+
+    .carouselItem:nth-child(2) .textContainer {
         font-size: .6rem;
-      }
-      .new{
+    }
+
+    .new {
         font-size: 2rem;
-      }
-      .carouselItem:nth-child(2) button {
+    }
+
+    .carouselItem:nth-child(2) button {
         border-radius: 2rem;
         background-color: blue;
         font-size: .6rem;
@@ -142,6 +146,13 @@
         width: 100%;
         padding-left: 3.5em;
         font-size: .6rem;
+    }
+
+    .carouselItem:nth-child(1) .textContainer {
+        width: 100%;
+        padding-left: 3.5em;
+        font-size: .6rem;
+        margin-bottom: 2rem;
     }
 
     .carouselItem:nth-child(1) .imageContainer img {
@@ -170,6 +181,7 @@
     .carouselItem {
         height: 300px;
     }
+
     .carouselItem:nth-child(1) .imageContainer,
     .carouselItem:nth-child(1) .textContainer {
         width: 100%;

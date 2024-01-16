@@ -9,7 +9,7 @@ const images = [
         butn: true,
         img: 'https://pngimg.com/d/iphone_13_PNG19.png',
         heading: 'Experience the Future with the New iPhone',
-        paragraph: "Step into the future with our new iPhone, equipped with advanced zoom capabilities that bring the world closer to you. Capture life's moments in stunning detail, making every memory unforgettable."
+        paragraph: "Step into the future with our new iPhone, equipped with advanced zoom capabilities th"
     },
     {
         butn: true,
@@ -31,17 +31,17 @@ export default function Carousel() {
         currentImageIndex === images.length - 1 ? setCurrentImageIndex(0) : setCurrentImageIndex(prev => prev + 1)
     }
 
-    useEffect(() => {
-        const slider = setTimeout(() => {
-            if (currentImageIndex === images.length - 1) {
-                setCurrentImageIndex(0)
-                return
-            }
-            setCurrentImageIndex(prev => prev + 1)
-        }, 15000)
+    // useEffect(() => {
+    //     const slider = setTimeout(() => {
+    //         if (currentImageIndex === images.length - 1) {
+    //             setCurrentImageIndex(0)
+    //             return
+    //         }
+    //         setCurrentImageIndex(prev => prev + 1)
+    //     }, 15000)
 
-        return () => clearTimeout(slider)
-    }, [currentImageIndex])
+    //     return () => clearTimeout(slider)
+    // }, [currentImageIndex])
     return (
         <>
             <div className={styles.carousel}>
@@ -50,7 +50,7 @@ export default function Carousel() {
                     <CarouselItem
                         key={0}
                         img='https://pngimg.com/d/iphone_13_PNG19.png'
-                        para="Step into the future with our new iPhone, equipped with advanced zoom capabilities that bring the world closer to you. Capture life's moments in stunning detail, making every memory unforgettable."
+                        para="Step into the future with our new iPhone, equipped with advanced zoom capabilities that bring the world closer to you."
                         title='Experience the Future with the New iPhone'
                         butn={true} />
                     <div className={styless.carouselItem}>
