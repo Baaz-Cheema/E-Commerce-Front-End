@@ -8,7 +8,7 @@ export default function BestDeals() {
             <div className={styles.heading}>
                 <h2>Get the Best Deals now </h2>
             </div>
-            <p style={{ marginTop: '.2rem' }}>Get our best deals available just for you</p>
+            <p className={styles.para} style={{ marginTop: '.2rem' }}>Get our best deals available just for you</p>
             <div className={styles.bestDeals}>
                 <div className={styles.laptop}>
                     <div>

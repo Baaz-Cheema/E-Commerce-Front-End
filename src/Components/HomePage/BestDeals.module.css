@@ -134,13 +134,22 @@
     .bestDeals {
         flex-direction: column;
         height: auto;
+        margin: 0 .5rem;
+    }
+
+    .heading {
+        margin-left: .5rem;
+    }
+
+    .para {
+        margin-left: .5rem
     }
 
     .bestDeals .laptop {
         width: 100%;
         margin-right: 0;
     }
-   
+
 
     .bestDeals div:nth-child(2) {
         width: 100%;
@@ -163,11 +172,13 @@
         flex-direction: column;
         height: auto;
     }
-    .heading h2{
+
+    .heading h2 {
         margin-bottom: 0.3;
         font-size: 1.3rem;
     }
-    .heading a{
+
+    .heading a {
         margin-bottom: .3rem;
     }
 
