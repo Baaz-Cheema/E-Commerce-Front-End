@@ -50,7 +50,7 @@ export default forwardRef(function HotCollectionItem(props, ref) {
                 <h5>{title}</h5>
                 {/* <span className={styles.rating}>{rating} <i className='bx bxs-star' ></i></span> */}
                 <div className={styles.btn} >
-                    <p className={styles.discount}> <span>${price}</span> <span >${Math.floor(price / (1 - discount / 100))}</span></p>
+                    <p className={styles.discount}> <span id='price'>${price}</span> <span >${Math.floor(price / (1 - discount / 100))}</span></p>
                 </div>
                 <motion.button whileTap={{ scale: 0.9 }} disabled={Loading} onClick={addToCart} className={styles.addToCart}><i className='bx bx-plus'></i></motion.button>
             </div>

@@ -36,7 +36,6 @@
 
 .info h5 {
     font-size: 1rem;
-    white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
 }
@@ -58,6 +57,7 @@
     height: 2rem;
     color: #555;
 }
+
 
 .price p {
     background-color: green;
@@ -83,7 +83,7 @@
     margin: 0;
     align-self: flex-end;
     font-weight: bold;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 
 .btn div {
@@ -158,6 +158,7 @@
 
 
 
+
 @media screen and (max-width:1100px) {
     .addToCart {
         right: 0;
@@ -224,7 +225,7 @@
 
     .info h5 {
         font-size: 1rem;
-        width: 8rem;
+        width: 12rem;
     }
 
     .addToCart {
@@ -239,12 +240,11 @@
 
     .info .rating,
     .info .discount {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 
     .info h5 {
         font-size: .9rem;
-        width: 9.3rem;
     }
-   
+
 }

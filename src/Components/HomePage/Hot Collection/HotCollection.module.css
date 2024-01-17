@@ -40,7 +40,6 @@
         height: 47rem;
         margin-bottom: 3rem;
     }
-
     .carousel {
         width: 230%;
     }
@@ -57,11 +56,12 @@
     .carousel {
         grid-template-columns: repeat(8, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        width: 380%;
-
+        width: 480%;
+        height: auto;
     }
 
     .parent {
         height: 40rem;
+        height: auto;
     }
 }
