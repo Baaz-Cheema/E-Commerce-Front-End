@@ -9,7 +9,7 @@ export default function CarouselItem({ title, para, img, butn }) {
                 <div className={styles.textContainer}>
                     <h1>{title}</h1>
                     <p>{para}</p>
-                    {butn && <Link to={'/store'}><button> Shop Now</button></Link> }
+                    {butn && <Link to={'/store'}><button> Shop Now</button></Link>}
                 </div>
                 <div className={styles.imageContainer}>
                     <img src={img} alt="" />
