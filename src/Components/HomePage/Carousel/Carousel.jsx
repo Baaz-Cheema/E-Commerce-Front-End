@@ -49,7 +49,7 @@ export default function Carousel() {
                 <div className={styles.carouselItemContainer} style={{ 'transform': `translateX(-${currentImageIndex * 100}%)` }}>
                     <CarouselItem
                         key={0}
-                        img='https://pngimg.com/d/iphone_13_PNG19.png'
+                        img='https://i.imgur.com/IDrfWtw.png'
                         para="Step into the future with our new iPhone, equipped with advanced zoom capabilities that bring the world closer to you."
                         title='Experience the Future with the New iPhone'
                         butn={true} />

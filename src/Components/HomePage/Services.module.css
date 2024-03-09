@@ -24,6 +24,11 @@
     font-weight: bold
 }
 
+.info a {
+    display: flex;
+    align-items: center;
+}
+
 .info h6 {
     font-weight: bold;
 }

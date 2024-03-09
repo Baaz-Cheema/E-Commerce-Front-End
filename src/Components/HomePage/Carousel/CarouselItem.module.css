@@ -17,6 +17,8 @@
 
 .carouselItem:nth-child(1) button {
     margin-top: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 }
 
 .carouselItem:nth-child(1) .imageContainer img {
@@ -249,7 +251,7 @@
     }
 
     .carouselItem:nth-child(1) .textContainer button {
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
 
     .carouselItem:nth-child(1) .imageContainer,
