@@ -71,12 +71,12 @@ export default function NavCategories() {
         initial: { x: -15, opacity: 0 }, animate: { x: 0, opacity: 1 },
 
     }
-    return <div id={styles.container}>
-        <span className={styles.ctg} style={{ color: show ? 'var(--main-bg-color)' : '' }} onClick={() => setShow(prev => !prev)} onMouseEnter={() => setShow(true)}>
+    return <div id={styles.container} onMouseEnter={() => setShow(true)} onMouseLeave={() => setShow(false)}>
+        <span className={styles.ctg} style={{ color: show ? 'var(--main-bg-color)' : '' }} >
             Categories <span className={styles['select-arrow']}><motion.i animate={{ rotate: show ? '180deg' : 0 }} className='bx bx-chevron-up'></motion.i></span>
         </span>
         <AnimatePresence>
-            {show && <motion.div onMouseLeave={() => setShow(false)} variants={listItem} initial='initial' animate='animate' exit='exit' className={styles.inner}>
+            {show && <motion.div variants={listItem} initial='initial' animate='animate' exit='exit' className={styles.inner}>
                 <motion.div variants={childVariants} initial='initial' animate='animate' className={styles.hello}>
                     {groups && groups.map((category, index) => (
                         <DropItem childVariants={childVariants} delay={index * 0.05} key={index} category={category} selectCategory={selectCategory} />
