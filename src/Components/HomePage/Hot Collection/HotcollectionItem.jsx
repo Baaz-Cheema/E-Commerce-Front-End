@@ -11,12 +11,7 @@ export default forwardRef(function HotCollectionItem(props, ref) {
     const dispatch = useDispatch()
     const { title, price, thumbnail, discount, displayDetails, product } = props
 
-    const truncateStr = (str) => {
-        if (str.length > 16) {
-            return str.slice(0, 16) + '...'
-        }
-        return str
-    }
+
     const addToCart = () => {
         setLoading(true)
         setTimeout(() => {

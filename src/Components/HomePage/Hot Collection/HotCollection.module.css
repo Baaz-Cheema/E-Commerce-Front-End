@@ -1,10 +1,11 @@
 .carousel {
-    width: 195%;
     transition: transform .3s ease-out;
     display: grid;
     height: 100%;
-    grid-template-columns: repeat(8, minmax(0, 1fr));
-    grid-template-rows: repeat(2, minmax(0, 1fr));
+    grid-auto-flow: column;
+    grid-auto-columns: 23%;
+    overflow: auto;
+    scroll-behavior: smooth;
 }
 
 .featured {
@@ -13,55 +14,29 @@
 
 .parent {
     width: 100%;
-    height: 50rem;
-    overflow: auto;
     margin-bottom: 8rem;
-    scroll-behavior: smooth;
 }
 
-
-
-
-/* This applies to the element with class .parent */
+.carousel::-webkit-scrollbar,
 .parent::-webkit-scrollbar {
     width: 2px;
     height: 0px;
-    /* Adjust scrollbar width */
 }
 
-/* @media (max-width:400px) {
-    .parent{
-        height: 25rem;
-    }
-} */
-
-@media screen and (max-width: 1000px) {
-    .parent {
-        height: 47rem;
-        margin-bottom: 3rem;
-    }
+@media (max-width: 1096px) {
     .carousel {
-        width: 230%;
+        grid-auto-columns: 30%;
     }
 }
 
 @media screen and (max-width: 760px) {
     .carousel {
-        width: 320%;
+        grid-auto-columns: 47%;
     }
 }
 
 @media screen and (max-width: 550px) {
-
     .carousel {
-        grid-template-columns: repeat(8, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        width: 480%;
-        height: auto;
-    }
-
-    .parent {
-        height: 40rem;
-        height: auto;
+        grid-auto-columns: 66%;
     }
 }

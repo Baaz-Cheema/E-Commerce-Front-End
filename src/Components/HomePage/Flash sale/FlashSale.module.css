@@ -22,7 +22,8 @@
 
 .group {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-auto-flow: column;
+  
   transition: 0.3s;
   overflow-x: scroll;
   gap: 10px;

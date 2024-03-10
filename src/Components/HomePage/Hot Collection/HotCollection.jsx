@@ -4,16 +4,16 @@ import HeadingButtons from '../UtilComponents/HeadingButtons';
 import { useRef } from 'react';
 import { useState, useEffect } from 'react';
 
-export default function HotCollection() {
+export default function HotCollection({ url, title }) {
     const scrollRef = useRef()
     const itemRef = useRef()
     const [data, setData] = useState([])
     async function getData() {
         try {
-            const response = await fetch('https://dummyjson.com/products?limit=16&skip=78')
-            const responseData= await response.json()
+            const response = await fetch(url)
+            const responseData = await response.json()
             setData(responseData.products)
-            if(!response.ok){
+            if (!response.ok) {
                 console.log(response)
             }
         }
@@ -27,21 +27,18 @@ export default function HotCollection() {
     }
         , [])
     function goLeft() {
-        scrollRef.current.scrollLeft -= itemRef.current.offsetWidth + 12
-        // console.log(itemRef.current.offsetWidth, scrollRef.current.scrollLeft)
+        scrollRef.current.scrollLeft -= itemRef.current.offsetWidth
     }
 
     function goRight() {
-        // console.log(itemRef.current.offsetWidth)
-        scrollRef.current.scrollLeft += itemRef.current.offsetWidth + 12
-        // console.log(itemRef.current.offsetWidth, scrollRef.current.scrollLeft, scrollRef.current.scrollLeft > 800)
+        scrollRef.current.scrollLeft += itemRef.current.offsetWidth
     }
 
     return (
         <>
             <HeadingButtons linkTo={'All Offers'} navLeft={goLeft} navRight={goRight} title={'Popular Products'} />
-            <div className={styles.parent} ref={scrollRef}>
-                <div className={styles.carousel}>
+            <div className={styles.parent} style={{ marginBottom: title === 'Featured Products' && 0 }}>
+                <div ref={scrollRef} className={styles.carousel + ' snaps'}>
                     <HotCollectionGroup ref={itemRef} productData={data} />
                 </div>
             </div>

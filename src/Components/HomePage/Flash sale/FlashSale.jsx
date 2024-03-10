@@ -76,7 +76,7 @@ export default function FlashSale() {
                         <button id={groupStyles.saleP}>See all Items <i className='bx bx-chevron-right' ></i></button>
                     </Link>
                 </div>
-                <div ref={scrollRef} className={groupStyles.group}>
+                <div ref={scrollRef} className={groupStyles.group + ' snaps'}>
                     {products && products.map((item, i) => <FlashSaleItem ref={itemRef}
                         stock={item.stock}
                         key={i}
