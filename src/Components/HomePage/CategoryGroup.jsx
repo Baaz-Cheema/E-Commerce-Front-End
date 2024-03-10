@@ -1,11 +1,13 @@
 import CategoryItem from "./CategoryItem"
+import { forwardRef } from "react"
 import styles from './CategoryGroup.module.css'
 
 
-export default function CategoryGroup({ data, func}) {
+export default forwardRef(function CategoryGroup(props,ref) {
     return (
-        <div className={styles.categoryGroup}>
-            {data.map((item, i) => <CategoryItem func={func}  key={i} title={item.title} quantity={item.quantity} image={item.img} />)}
+        <div ref={ref} className={styles.categoryGroup}>
+            {props.data.map((item, i) => <CategoryItem func={props.func} key={i} title={item.title} quantity={item.quantity} image={item.img} />)}
         </div>
     )
 }
+)

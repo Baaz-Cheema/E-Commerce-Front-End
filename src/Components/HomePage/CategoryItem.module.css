@@ -5,8 +5,9 @@
     border: 1px solid #f0eded;
     padding: 1rem;
     box-sizing: border-box;
-    margin: .5rem;
     cursor: pointer;
+    overflow: hidden;
+    white-space: wrap;
 }
 
 
@@ -27,7 +28,8 @@
     align-items: center;
     font-size: .8rem;
 }
-.categoryItem a i{
+
+.categoryItem a i {
     font-size: .8rem;
     margin-bottom: 2.5px;
 }
@@ -88,9 +90,8 @@ a i {
 
     .categoryItem div:nth-child(1) h6 {
         font-size: .9rem;
-        white-space: nowrap;
         margin-bottom: 0;
-
+        padding: .5rem;
     }
 
     .imgContainer img {
@@ -106,12 +107,12 @@ a i {
 
 @media screen and (max-width:480px) {
     .categoryItem div:nth-child(1) h6 {
-        font-size: .8rem;
+        font-size: .7rem;
         white-space: nowrap;
     }
 
     .imgContainer img {
-        width: 75px;
-        height: 75px;
+        width: 73px;
+        height: 73px;
     }
 }

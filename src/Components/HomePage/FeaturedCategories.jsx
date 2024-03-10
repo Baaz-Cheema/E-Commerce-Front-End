@@ -1,6 +1,6 @@
 import styles from './FeaturedCategories.module.css'
 import CategoryGroup from './CategoryGroup'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import HeadingButtons from './UtilComponents/HeadingButtons'
 import { useDispatch } from 'react-redux'
 import { productListActions } from '../../store/EcommerceStore'
@@ -29,15 +29,19 @@ const arr2 = [
 
 export default function FeaturedCategories() {
     const [currentGroupIndex, setcurrentGroupIndex] = useState(0)
-    function goLeft() {
-        currentGroupIndex === .5 ? setcurrentGroupIndex(0) : null
-    }
-    function goRight() {
-        currentGroupIndex === 0 ? setcurrentGroupIndex(.5) : null
-    }
+
 
     const dispatch = useDispatch()
     const navigate = useNavigate()
+    const parent = useRef()
+    const child = useRef()
+    function goLeft() {
+        parent.current.scrollLeft -= child.current.offsetWidth
+    }
+
+    function goRight() {
+        parent.current.scrollLeft += child.current.offsetWidth
+    }
 
 
     async function selectCategory(str) {
@@ -57,8 +61,8 @@ export default function FeaturedCategories() {
         <>
             <HeadingButtons linkTo={'More'} title={'Featured Categories'} navLeft={goLeft} navRight={goRight} />
             <div className={styles.parent}>
-                <div className={styles.carousel} style={{ 'transform': `translateX(-${currentGroupIndex * 100}%)` }} >
-                    <CategoryGroup func={selectCategory} data={arr1} />
+                <div ref={parent} className={styles.carousel + ' snaps'} >
+                    <CategoryGroup ref={child} func={selectCategory} data={arr1} />
                     <CategoryGroup func={selectCategory} data={arr2} />
                 </div>
             </div>
