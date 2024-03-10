@@ -36,7 +36,7 @@ export default function HotCollection({ url, title }) {
 
     return (
         <>
-            <HeadingButtons linkTo={'All Offers'} navLeft={goLeft} navRight={goRight} title={'Popular Products'} />
+            <HeadingButtons linkTo={'All Offers'} navLeft={goLeft} navRight={goRight} title={title} />
             <div className={styles.parent} style={{ marginBottom: title === 'Featured Products' && 0 }}>
                 <div ref={scrollRef} className={styles.carousel + ' snaps'}>
                     <HotCollectionGroup ref={itemRef} productData={data} />

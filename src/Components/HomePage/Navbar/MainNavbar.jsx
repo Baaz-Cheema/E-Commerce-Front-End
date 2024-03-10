@@ -14,7 +14,6 @@ export default function MainNavbar() {
     const products = useSelector(state => state.productList.allProducts)
     const isLoggedIn = useSelector(state => state.auth.isLoggedIn)
     const [scrolled, setScrolled] = useState(false)
-    const [hehe, sethehe] = useState(false)
 
     const navigate = useNavigate();
     const [showBox, setshowBox] = useState(false)
@@ -44,7 +43,7 @@ export default function MainNavbar() {
                 <div className={styles.heading} >
                     <Navmenu />
                     <h3 onClick={() => navigate('/')}>  Almari </h3> <span style={{ fontSize: '1rem', marginBottom: '1rem' }}>&trade;</span>
-                    <div className={styles.ctg} style={{ height: '100%' }} onMouseEnter={() => sethehe(true)} onMouseLeave={() => sethehe(false)}>
+                    <div className={styles.ctg} style={{ height: '100%' }}>
                         <NavCategories />
                     </div>
                     <Link className={styles.navItem} to={'/store'}>Shop</Link>
