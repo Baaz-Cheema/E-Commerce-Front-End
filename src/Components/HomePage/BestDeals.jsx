@@ -14,7 +14,7 @@ export default function BestDeals() {
                     <div>
                         <h3>ASUS ZenBook</h3>
                         <h2>Top product 2022</h2>
-                        <h3>From $899</h3>
+                        <h3>From <span style={{ color: 'gold', fontSize:'2.2rem' }}>$899</span></h3>
                     </div>
                     <img src="https://www.transparentpng.com/thumb/laptop/9oRuDc-refreshed-pavilion-gaming-series-launching-next-month.png" alt="Laptops Png, Transparent " />
                 </div>
@@ -31,7 +31,7 @@ export default function BestDeals() {
                         <div>
                             <h3 >Home Appliances</h3>
                             <h2 >Top products 2022</h2>
-                            <h3>From $899</h3>
+                            <h3>From $799</h3>
                         </div>
                         <img src="https://parspng.com/wp-content/uploads/2023/06/Home-Appliancespng.parspng.com-6.png" alt="" />
                     </div>

@@ -1,8 +1,8 @@
 import { useState } from "react"
 import CarouselItem from "./CarouselItem"
 import styles from './Carousel.module.css'
-import { useEffect } from "react"
 import { Link } from "react-router-dom"
+import { useRef } from "react"
 import styless from './CarouselItem.module.css'
 const images = [
     {
@@ -23,16 +23,19 @@ const images = [
 
 
 export default function Carousel() {
+    const parent = useRef()
+    const child = useRef()
     const [currentImageIndex, setCurrentImageIndex] = useState(0)
     function goLeft() {
-        currentImageIndex === 0 ? setCurrentImageIndex(images.length - 1) : setCurrentImageIndex(prev => prev - 1)
+        parent.current.scrollLeft -= child.current.offsetWidth
     }
+
     function goRight() {
-        currentImageIndex === images.length - 1 ? setCurrentImageIndex(0) : setCurrentImageIndex(prev => prev + 1)
+        parent.current.scrollLeft += child.current.offsetWidth
     }
 
     // useEffect(() => {
-    //     const slider = setTimeout(() => {
+    //s     const slider = setTimeout(() => {
     //         if (currentImageIndex === images.length - 1) {
     //             setCurrentImageIndex(0)
     //             return
@@ -46,14 +49,14 @@ export default function Carousel() {
         <>
             <div className={styles.carousel}>
                 <button className={`${styles.arrow} ${styles['arrow-left']}`} onClick={goLeft}><i className='bx bx-chevron-left' ></i></button>
-                <div className={styles.carouselItemContainer} style={{ 'transform': `translateX(-${currentImageIndex * 100}%)` }}>
+                <div ref={parent} className={styles.carouselItemContainer + ' snaps'} style={{ 'transform': `translateX(-${currentImageIndex * 100}%)` }}>
                     <CarouselItem
                         key={0}
-                        img='https://i.imgur.com/IDrfWtw.png'
+                        img='https://i.postimg.cc/wj3kSzv4/iphone-webp.webp'
                         para="Step into the future with our new iPhone, equipped with advanced zoom capabilities that bring the world closer to you."
                         title='Experience the Future with the New iPhone'
                         butn={true} />
-                    <div className={styless.carouselItem}>
+                    <div ref={child} className={styless.carouselItem}>
                         <div className={styless.textContainer}>
                             <span>Men`s collection</span>
                             <span className={styless.new}>Mega sale</span>
